@@ -70,6 +70,8 @@ class LoginScreen: UIView {
         tf.layer.cornerRadius = 8
         tf.layer.borderWidth = 1.0
         tf.layer.borderColor = UIColor.white.cgColor
+        
+        tf.text = "almenezes912@gmail.com"
         return tf
     }()
     
@@ -87,6 +89,7 @@ class LoginScreen: UIView {
         tf.layer.borderWidth = 1.0
         tf.layer.borderColor = UIColor.white.cgColor
         tf.isSecureTextEntry = true
+        tf.text = "9Alysson12"
         return tf
     }()
     
@@ -119,6 +122,10 @@ class LoginScreen: UIView {
         return view
     }()
     
+    func configTextFieldDelegate( delegate: UITextFieldDelegate){
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
 
     @objc func tappedLoginButton(_ sender: UIButton){
         print(#function)
@@ -127,6 +134,8 @@ class LoginScreen: UIView {
     @objc func tappedRecoverPasswprdButton(_ sender: UIButton){
         print(#function)
     }
+    
+    
     
     
     lazy var signInMetamaskView: UIView = {
