@@ -14,6 +14,7 @@
 		3808776929C8C3EE007C60F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3808776729C8C3EE007C60F8 /* LaunchScreen.storyboard */; };
 		3808777329C8C549007C60F8 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3808777229C8C549007C60F8 /* LoginScreen.swift */; };
 		380C90ADFBFC54AC26A95A8B /* Pods_appNFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395A4814039328AD116E04BF /* Pods_appNFT.framework */; };
+		3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855B48529E788F700CA6768 /* UIViewController+Extension.swift */; };
 		38A25BB429E78278006E3D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A25BB329E78278006E3D7F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3808776829C8C3EE007C60F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3808776A29C8C3EE007C60F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3808777229C8C549007C60F8 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		3855B48529E788F700CA6768 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38A25BB329E78278006E3D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		395A4814039328AD116E04BF /* Pods_appNFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appNFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33EFDB601331DB8E99236D1 /* Pods-appNFT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appNFT.debug.xcconfig"; path = "Target Support Files/Pods-appNFT/Pods-appNFT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		3808777029C8C4DE007C60F8 /* src  */ = {
 			isa = PBXGroup;
 			children = (
+				3855B48329E788CA00CA6768 /* Utils */,
 				3808777129C8C52E007C60F8 /* Login */,
 			);
 			path = "src ";
@@ -100,6 +103,22 @@
 				3808777229C8C549007C60F8 /* LoginScreen.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3855B48329E788CA00CA6768 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3855B48429E788CF00CA6768 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3855B48429E788CF00CA6768 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3855B48529E788F700CA6768 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B4C200E151504B5D5CCF2456 /* Frameworks */ = {
@@ -228,6 +247,7 @@
 				3808777329C8C549007C60F8 /* LoginScreen.swift in Sources */,
 				3808776129C8C3ED007C60F8 /* LoginVC.swift in Sources */,
 				3808775D29C8C3ED007C60F8 /* AppDelegate.swift in Sources */,
+				3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */,
 				3808775F29C8C3ED007C60F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
