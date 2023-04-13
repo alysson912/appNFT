@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol loginScreenProtocol: AnyObject {
+    func tappedLoginButton()
+    func tappedRegisterButton()
+}
+
 class LoginScreen: UIView {
 
+    private weak var delegate: loginScreenProtocol?
+    
+    public func delegate(delegate: loginScreenProtocol?){
+        self.delegate = delegate
+    }
+    
     
     lazy var subImageView : UIImageView = {
         let image = UIImageView()
@@ -111,6 +122,7 @@ class LoginScreen: UIView {
 
     @objc func tappedLoginButton(_ sender: UIButton){
         print(#function)
+        delegate?.tappedLoginButton()
     }
     @objc func tappedRecoverPasswprdButton(_ sender: UIButton){
         print(#function)
