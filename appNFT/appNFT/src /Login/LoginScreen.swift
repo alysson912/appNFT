@@ -71,7 +71,7 @@ class LoginScreen: UIView {
         tf.layer.borderWidth = 1.0
         tf.layer.borderColor = UIColor.white.cgColor
         
-        tf.text = "almenezes912@gmail.com"
+       // tf.text = "almenezes912@gmail.com"
         return tf
     }()
     
@@ -89,7 +89,7 @@ class LoginScreen: UIView {
         tf.layer.borderWidth = 1.0
         tf.layer.borderColor = UIColor.white.cgColor
         tf.isSecureTextEntry = true
-        tf.text = "9Alysson12"
+       // tf.text = "9Alysson12"
         return tf
     }()
     
@@ -251,5 +251,4 @@ class LoginScreen: UIView {
             signInMetamaskLabel.centerYAnchor.constraint(equalTo: signInMetamaskView.centerYAnchor),
         ])
     }
-    
 }

@@ -29,16 +29,33 @@ class LoginVC: UIViewController {
 }
 
 extension LoginVC: UITextFieldDelegate {
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let email: String = loginScreen?.emailTextField.text ?? ""
-        let password: String = loginScreen?.passwordTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty {
-            loginScreen?.loginButton.isEnabled = true
-            loginScreen?.loginButton.backgroundColor = .darkGray
+        if textField.text?.isEmpty ?? false {
+            textField.layer.borderWidth = 1.5
+            textField.layer.borderColor = UIColor.red.cgColor
         } else {
-            loginScreen?.loginButton.isEnabled = false
-            loginScreen?.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+            switch textField {
+            case loginScreen?.emailTextField:
+                if (loginScreen?.emailTextField.text ?? "").isValid(validType: .email){
+                    loginScreen?.emailTextField.layer.borderWidth = 1
+                    loginScreen?.emailTextField.layer.borderColor = UIColor.white.cgColor
+                }else{
+                    loginScreen?.emailTextField.layer.borderWidth = 1.5
+                    loginScreen?.emailTextField.layer.borderColor = UIColor.red.cgColor
+                }
+            case loginScreen?.passwordTextField:
+                if (loginScreen?.passwordTextField.text ?? "").isValid(validType: .password){
+                    loginScreen?.passwordTextField.layer.borderWidth = 1
+                    loginScreen?.passwordTextField.layer.borderColor = UIColor.white.cgColor
+                }else{
+                    loginScreen?.passwordTextField.layer.borderWidth = 1.5
+                    loginScreen?.passwordTextField.layer.borderColor = UIColor.red.cgColor
+                }
+            default:
+                break
+            }
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
