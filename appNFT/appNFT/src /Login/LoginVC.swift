@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
 
     var loginScreen: LoginScreen?
-    
+    var auth: Auth?
 
     override func loadView() {
         loginScreen = LoginScreen()
@@ -19,13 +20,38 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
         dismissKeyboard()
+        auth = Auth.auth()
         loginScreen?.delegate(delegate: self)
         loginScreen?.configTextFieldDelegate(delegate: self)
+        isEnableLoginButton(false)
     }
 
-
+    func validateTextFields(){
+        if (loginScreen?.emailTextField.text ?? "").isValid(validType: .email) &&
+        (loginScreen?.passwordTextField.text ?? "").isValid(validType: .password){
+            // habiltado
+            isEnableLoginButton(true)
+        }else {
+            // desable
+            isEnableLoginButton(false)
+        }
+            
+    }
+    
+    func isEnableLoginButton(_ isEnable: Bool){
+        if isEnable {
+            loginScreen?.loginButton.setTitleColor(.white, for: .normal)
+            loginScreen?.loginButton.isEnabled = true
+            loginScreen?.loginButton.alpha = 1
+            
+        }else {
+            loginScreen?.loginButton.setTitleColor(.white, for: .normal)
+            loginScreen?.loginButton.isEnabled = false
+            loginScreen?.loginButton.alpha = 0.4
+        }
+    }
+    
 }
 
 extension LoginVC: UITextFieldDelegate {
@@ -57,6 +83,7 @@ extension LoginVC: UITextFieldDelegate {
                 break
             }
         }
+        validateTextFields()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print(#function)
@@ -67,7 +94,13 @@ extension LoginVC: UITextFieldDelegate {
 
 extension LoginVC: loginScreenProtocol {
     func tappedLoginButton() {
-        print(#function)
+        auth?.signIn(withEmail: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "", completion: { user, error in
+            if error != nil {// error
+                print(error?.localizedDescription ?? "")
+            }else{// succes
+                print("Sucesso")
+            }
+        })
     }
     
     func tappedRegisterButton() { // falta implementar
