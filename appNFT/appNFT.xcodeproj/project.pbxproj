@@ -18,6 +18,7 @@
 		3832F5A029F0835900A8AA18 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F59F29F0835900A8AA18 /* Alert.swift */; };
 		3832F5A329F089CB00A8AA18 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A229F089CB00A8AA18 /* TabBarVC.swift */; };
 		3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A629F08AB300A8AA18 /* HomeVC.swift */; };
+		3832F5AA29F08DB900A8AA18 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A929F08DB900A8AA18 /* HomeScreen.swift */; };
 		3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855B48529E788F700CA6768 /* UIViewController+Extension.swift */; };
 		38A25BB429E78278006E3D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A25BB329E78278006E3D7F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		3832F59F29F0835900A8AA18 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		3832F5A229F089CB00A8AA18 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		3832F5A629F08AB300A8AA18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3832F5A929F08DB900A8AA18 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3855B48529E788F700CA6768 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38A25BB329E78278006E3D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		395A4814039328AD116E04BF /* Pods_appNFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appNFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,9 +145,18 @@
 		3832F5A529F08A4600A8AA18 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3832F5A829F08DA800A8AA18 /* Screen */,
 				3832F5A629F08AB300A8AA18 /* HomeVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3832F5A829F08DA800A8AA18 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3832F5A929F08DB900A8AA18 /* HomeScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		3855B48329E788CA00CA6768 /* Utils */ = {
@@ -294,6 +305,7 @@
 				3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */,
 				3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */,
 				380AEF5F29EDDA00009EEA58 /* String+Extension.swift in Sources */,
+				3832F5AA29F08DB900A8AA18 /* HomeScreen.swift in Sources */,
 				3808775F29C8C3ED007C60F8 /* SceneDelegate.swift in Sources */,
 				3832F5A329F089CB00A8AA18 /* TabBarVC.swift in Sources */,
 				3832F5A029F0835900A8AA18 /* Alert.swift in Sources */,
