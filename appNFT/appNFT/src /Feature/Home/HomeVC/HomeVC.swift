@@ -8,8 +8,9 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
-     var homeScreen: HomeScreen?
+    
+    var homeScreen: HomeScreen?
+    var viewModel = HomeViewModel()
     
     override func loadView() {
         homeScreen = HomeScreen()
@@ -22,8 +23,19 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.delegate(delegate: self)
+        viewModel.fetchRequest(.mock)
     }
-  
+}
 
+extension HomeVC: HomeViewModelDelegate {
+    func sucess() {
+        print(#function)
+    }
+    
+    func error() {
+        print(#function)
+    }
+    
+    
 }
