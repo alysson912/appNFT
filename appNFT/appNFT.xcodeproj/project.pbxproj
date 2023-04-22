@@ -27,6 +27,8 @@
 		38CC533F29F1EDF4000F0EEA /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CC533D29F1EDF2000F0EEA /* HomeData.json */; };
 		38CC534029F1EDF4000F0EEA /* WalletData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38CC533E29F1EDF4000F0EEA /* WalletData.json */; };
 		38CC534329F1EED2000F0EEA /* NFTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC534229F1EED2000F0EEA /* NFTData.swift */; };
+		38CC534729F447D5000F0EEA /* NftFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC534629F447D5000F0EEA /* NftFilterCollectionViewCell.swift */; };
+		38CC534A29F44815000F0EEA /* NftFilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC534929F44815000F0EEA /* NftFilterCollectionViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		38CC533D29F1EDF2000F0EEA /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
 		38CC533E29F1EDF4000F0EEA /* WalletData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WalletData.json; sourceTree = "<group>"; };
 		38CC534229F1EED2000F0EEA /* NFTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTData.swift; sourceTree = "<group>"; };
+		38CC534629F447D5000F0EEA /* NftFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		38CC534929F44815000F0EEA /* NftFilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		395A4814039328AD116E04BF /* Pods_appNFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appNFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33EFDB601331DB8E99236D1 /* Pods-appNFT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appNFT.debug.xcconfig"; path = "Target Support Files/Pods-appNFT/Pods-appNFT.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCFF4026630A3CF8191F858 /* Pods-appNFT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appNFT.release.xcconfig"; path = "Target Support Files/Pods-appNFT/Pods-appNFT.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		3832F5A429F08A0A00A8AA18 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				38CC534429F4479A000F0EEA /* Cells */,
 				3832F5A529F08A4600A8AA18 /* Home */,
 				3808777129C8C52E007C60F8 /* Login */,
 			);
@@ -240,6 +245,31 @@
 				38CC534229F1EED2000F0EEA /* NFTData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		38CC534429F4479A000F0EEA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38CC534529F447A2000F0EEA /* NFTFilter */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		38CC534529F447A2000F0EEA /* NFTFilter */ = {
+			isa = PBXGroup;
+			children = (
+				38CC534829F447F9000F0EEA /* Screen */,
+				38CC534629F447D5000F0EEA /* NftFilterCollectionViewCell.swift */,
+			);
+			path = NFTFilter;
+			sourceTree = "<group>";
+		};
+		38CC534829F447F9000F0EEA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				38CC534929F44815000F0EEA /* NftFilterCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		B4C200E151504B5D5CCF2456 /* Frameworks */ = {
@@ -373,6 +403,8 @@
 				3808775D29C8C3ED007C60F8 /* AppDelegate.swift in Sources */,
 				3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */,
 				3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */,
+				38CC534729F447D5000F0EEA /* NftFilterCollectionViewCell.swift in Sources */,
+				38CC534A29F44815000F0EEA /* NftFilterCollectionViewCellScreen.swift in Sources */,
 				38CC533B29F1EC0C000F0EEA /* GenericService.swift in Sources */,
 				38CC533929F1EBC8000F0EEA /* HomeService.swift in Sources */,
 				380AEF5F29EDDA00009EEA58 /* String+Extension.swift in Sources */,

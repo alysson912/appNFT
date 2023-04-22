@@ -9,12 +9,12 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    var homeScreen: HomeScreen?
+    var screen: HomeScreen?
     var viewModel = HomeViewModel()
     
     override func loadView() {
-        homeScreen = HomeScreen()
-        view = homeScreen
+        screen = HomeScreen()
+        view = screen
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,12 +25,26 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.mock)
+       
     }
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        return UICollectionViewCell()
+    }
+    
+    
 }
 
 extension HomeVC: HomeViewModelDelegate {
     func sucess() {
-        print(#function)
+        screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
     }
     
     func error() {

@@ -39,6 +39,7 @@ class HomeScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor =  UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         // TO DO: Register
+        collectionView.register(NftFilterCollectionViewCell.self, forCellWithReuseIdentifier: NftFilterCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)// a collection nasce com a cell contendo a distancias respectivas
         layout.scrollDirection = .horizontal
