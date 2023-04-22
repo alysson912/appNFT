@@ -37,7 +37,7 @@ class HomeScreen: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor =  UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        collectionView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         // TO DO: Register
         collectionView.register(NftFilterCollectionViewCell.self, forCellWithReuseIdentifier: NftFilterCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout()
@@ -97,7 +97,7 @@ class HomeScreen: UIView {
             viewBackGround.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             viewBackGround.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
-            viewBackGround.heightAnchor.constraint(equalToConstant: 200),
+            viewBackGround.heightAnchor.constraint(equalToConstant: 160),
             
             logoImageView.topAnchor.constraint(equalTo: viewBackGround.topAnchor, constant: 5),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),

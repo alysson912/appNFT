@@ -17,7 +17,7 @@ class NftFilterCollectionViewCellScreen: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
         label.clipsToBounds = true
-        label.layer.cornerRadius = 18
+        label.layer.cornerRadius = 10
         label.textAlignment = .center
         return label
     }()
@@ -39,10 +39,10 @@ class NftFilterCollectionViewCellScreen: UIView {
     
     func configConstraints(){
         NSLayoutConstraint.activate([
-            filterLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            filterLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            filterLabel.heightAnchor.constraint(equalToConstant: 34),
-            filterLabel.widthAnchor.constraint(equalToConstant: 100),
+            filterLabel.topAnchor.constraint(equalTo: topAnchor),
+            filterLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            filterLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            filterLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
