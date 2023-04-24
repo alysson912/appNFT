@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.mock)
        
@@ -78,5 +79,17 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt
+    }
+}
+
+extension HomeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // qualquer caractere alterado na search sera disparado
+
+        viewModel.filterSearchText(searchText)
+        screen?.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { // quando precionar buscar
+        searchBar.resignFirstResponder()
     }
 }
