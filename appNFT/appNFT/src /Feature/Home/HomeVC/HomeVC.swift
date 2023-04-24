@@ -50,12 +50,33 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 
 extension HomeVC: HomeViewModelDelegate {
     func sucess() {
-        screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+        DispatchQueue.main.async {
+            self.screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
+            self.screen?.tableView.reloadData()
+        }
+        
     }
     
     func error() {
         print(#function)
     }
+
+}
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: NftTableViewCell.identifier,for: indexPath ) as? NftTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentNft(indexPath: indexPath))
+        return cell ?? UITableViewCell()
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt
+    }
 }
