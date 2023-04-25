@@ -81,17 +81,45 @@ class HomeViewModel{
         return 360
     }
     // MARK: -  Filter Search
+    
+    var typeFilter: Int? {
+        return searchNftData?.filterListNft?.first(where: {$0.isSelected == true})?.id
+    }
     public func filterSearchText(_ text: String){
-        if text.isEmpty {
-            searchNftData?.nftList = nftData?.nftList // search vazia = exiba doto mundo
+        
+        var nftList: [Nft] = []
+        
+        if typeFilter == 0 /* 0 = todos os itens */ {
+            nftList = nftData?.nftList ?? [] // retorne a lista completa
+        } else {
+            nftList = nftData?.nftList?.filter({$0.type == typeFilter ?? 0}) ?? []
         }
-        searchNftData?.nftList = nftData?.nftList?.filter({ nft in // filtrando pelo user name (em lowerCased)
-            
-            // validacoes adicionais aqui -> 
-            return nft.userName?.lowercased().contains(text.lowercased()) ?? false //pegando o q o usuario digitou em caixa alta p/ caixa baixa
-        })
+        
+        if text.isEmpty {
+            searchNftData?.nftList = nftList // search vazia = exiba doto mundo
+        }else {
+            searchNftData?.nftList = nftList.filter({ nft in // filtrando pelo user name (em lowerCased)
+        
+                // validacoes adicionais aqui -> 
+                return nft.userName?.lowercased().contains(text.lowercased()) ?? false //pegando o q o usuario digitou em caixa alta p/ caixa baixa
+            })
+        }
     }
     
+    // MARK: -  Filter CollectionView, lofica para mudar a cor do item selecionado na collection
     
-    
+    public func setFilter(indexPath: IndexPath, searchText: String){
+        var filterNFT: [FilterNft] = []
+        for (index, value) in (searchNftData?.filterListNft ?? []).enumerated() {
+            var type = value
+            if index == indexPath.row {
+                type.isSelected = true
+            }else{
+                type.isSelected = false
+            }
+            filterNFT.append(type)
+        }
+        searchNftData?.filterListNft = filterNFT
+        filterSearchText(searchText)
+    }
 }
