@@ -8,14 +8,18 @@
 import UIKit
 
 class NftDetailScreen: UIView {
+    
+
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none // retirando linhas
-        tableView.showsVerticalScrollIndicator = false // desativando scrool indicator
         // TO DO: Register
-        tableView.backgroundColor = .white// UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tableView.register(NftImageTableViewCell.self, forCellReuseIdentifier: NftImageTableViewCell.identifier)
+        tableView.register(NftDescriptionTableViewCell.self, forCellReuseIdentifier: NftDescriptionTableViewCell.identifier)
+        
+        tableView.backgroundColor =  UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         return tableView
     }()
     
@@ -43,8 +47,7 @@ class NftDetailScreen: UIView {
     
     private func configConstraints(){
         NSLayoutConstraint.activate([
-        
-        
+    
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
