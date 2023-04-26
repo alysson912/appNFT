@@ -20,6 +20,7 @@ class NftDescriptionTableViewCellScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 30)
         return label
     }()
@@ -28,7 +29,7 @@ class NftDescriptionTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 18)
         label.numberOfLines = 0
         return label
     }()
@@ -71,3 +72,5 @@ class NftDescriptionTableViewCellScreen: UIView {
         ])
     }
 }
+
+
