@@ -54,5 +54,13 @@ class ListOffersTableViewCell: UITableViewCell {
         screen.nameUserLabel.text = data.userName ?? ""
         screen.nftPriceLabel.text = "\(data.nftPrice ?? 0 ) ETH "
         screen.lastVisualizationLabel.text = data.lastAccess ?? ""
+        
+        if isInitial {
+            screen.roundCorners(cornerRadiuns: 20, typeCorners: [.topLeft, .topRight])
+        }
+        
+        if isFinal {
+            screen.roundCorners(cornerRadiuns: 20, typeCorners: [.bottomLeft, .bottomRight])
+        }
     }
 }

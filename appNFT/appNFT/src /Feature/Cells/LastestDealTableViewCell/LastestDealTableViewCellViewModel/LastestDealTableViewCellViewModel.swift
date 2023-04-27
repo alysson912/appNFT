@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum HeightLastestDeal: CGFloat {
+    case height = 70
+}
+
 class LastestDealTableViewCellViewModel {
 
     
@@ -25,7 +29,7 @@ class LastestDealTableViewCellViewModel {
     }
     
     public var heightForRowAt: CGFloat {
-        return 70
+        return HeightLastestDeal.height.rawValue
     }
     
     public func  loadCurrentLastesDeal(indexPath: IndexPath) -> LatestDeal {
