@@ -23,6 +23,7 @@ class LastestDealTableViewCellScreen: UIView {
         tableView.separatorStyle = .none // retirando linhas
         tableView.showsVerticalScrollIndicator = false // desativando scrool indicator
         // TO DO: Register
+        tableView.register(ListOffersTableViewCell.self, forCellReuseIdentifier: ListOffersTableViewCell.identifier)
         //tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
         tableView.isScrollEnabled = false
         return tableView

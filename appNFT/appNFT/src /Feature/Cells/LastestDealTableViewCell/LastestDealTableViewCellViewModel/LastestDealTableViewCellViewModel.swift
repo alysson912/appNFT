@@ -27,4 +27,16 @@ class LastestDealTableViewCellViewModel {
     public var heightForRowAt: CGFloat {
         return 70
     }
+    
+    public func  loadCurrentLastesDeal(indexPath: IndexPath) -> LatestDeal {
+        return nft?.latestDeals?[indexPath.row] ?? LatestDeal()
+    }
+    
+    public func isInitial(indexPath: IndexPath) -> Bool {
+        return indexPath.row == 0
+    }
+    
+    public func isFinal(indexPath: IndexPath) -> Bool {
+        return indexPath.row == numberOfRowsInSection - 1
+    }
 }
