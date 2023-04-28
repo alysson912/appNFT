@@ -21,6 +21,11 @@
 		380D987A29FADF7500672C80 /* CACornerMask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D987929FADF7500672C80 /* CACornerMask+Extension.swift */; };
 		380D987D29FB00DE00672C80 /* MagnifyingGlassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D987C29FB00DE00672C80 /* MagnifyingGlassVC.swift */; };
 		380D988029FB00F200672C80 /* MagnifyingGlassScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380D987F29FB00F200672C80 /* MagnifyingGlassScreen.swift */; };
+		3820718029FC614F0084F06D /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820717F29FC614F0084F06D /* WalletVC.swift */; };
+		3820718329FC616F0084F06D /* WalletScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820718229FC616F0084F06D /* WalletScreen.swift */; };
+		3820718629FC67960084F06D /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820718529FC67960084F06D /* WalletViewModel.swift */; };
+		3820718929FC67D30084F06D /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820718829FC67D30084F06D /* WalletService.swift */; };
+		3820718B29FC691F0084F06D /* WalletData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820718A29FC691F0084F06D /* WalletData.swift */; };
 		3828B99B29F833250084A874 /* NftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3828B99A29F833250084A874 /* NftDetailVC.swift */; };
 		3828B99E29F8333B0084A874 /* NftDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3828B99D29F8333B0084A874 /* NftDetailViewModel.swift */; };
 		3828B9A129F833710084A874 /* NftDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3828B9A029F833710084A874 /* NftDetailScreen.swift */; };
@@ -65,6 +70,11 @@
 		380D987929FADF7500672C80 /* CACornerMask+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CACornerMask+Extension.swift"; sourceTree = "<group>"; };
 		380D987C29FB00DE00672C80 /* MagnifyingGlassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassVC.swift; sourceTree = "<group>"; };
 		380D987F29FB00F200672C80 /* MagnifyingGlassScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyingGlassScreen.swift; sourceTree = "<group>"; };
+		3820717F29FC614F0084F06D /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
+		3820718229FC616F0084F06D /* WalletScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletScreen.swift; sourceTree = "<group>"; };
+		3820718529FC67960084F06D /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		3820718829FC67D30084F06D /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		3820718A29FC691F0084F06D /* WalletData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletData.swift; sourceTree = "<group>"; };
 		3828B99A29F833250084A874 /* NftDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailVC.swift; sourceTree = "<group>"; };
 		3828B99D29F8333B0084A874 /* NftDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailViewModel.swift; sourceTree = "<group>"; };
 		3828B9A029F833710084A874 /* NftDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailScreen.swift; sourceTree = "<group>"; };
@@ -206,6 +216,40 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		3820717E29FC611E0084F06D /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				3820718429FC67700084F06D /* ViewModel */,
+				3820718129FC61580084F06D /* Screen */,
+				3820717F29FC614F0084F06D /* WalletVC.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		3820718129FC61580084F06D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3820718229FC616F0084F06D /* WalletScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3820718429FC67700084F06D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3820718529FC67960084F06D /* WalletViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3820718729FC67B30084F06D /* WalletService */ = {
+			isa = PBXGroup;
+			children = (
+				3820718829FC67D30084F06D /* WalletService.swift */,
+			);
+			path = WalletService;
+			sourceTree = "<group>";
+		};
 		3828B99929F833060084A874 /* NftDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +355,7 @@
 		3832F5A429F08A0A00A8AA18 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				3820717E29FC611E0084F06D /* Wallet */,
 				380D987B29FB00A500672C80 /* MagnifyingGlass */,
 				38CC534429F4479A000F0EEA /* Cells */,
 				3828B99929F833060084A874 /* NftDetail */,
@@ -385,6 +430,7 @@
 		38CC533729F1EBB3000F0EEA /* HomeService */ = {
 			isa = PBXGroup;
 			children = (
+				3820718729FC67B30084F06D /* WalletService */,
 				38CC533829F1EBC8000F0EEA /* HomeService.swift */,
 			);
 			path = HomeService;
@@ -403,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				38CC534229F1EED2000F0EEA /* NFTData.swift */,
+				3820718A29FC691F0084F06D /* WalletData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -579,14 +626,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3820718629FC67960084F06D /* WalletViewModel.swift in Sources */,
 				3828B9B329F9E16D0084A874 /* LastestDealTableViewCellScreen.swift in Sources */,
+				3820718929FC67D30084F06D /* WalletService.swift in Sources */,
 				3808777329C8C549007C60F8 /* LoginScreen.swift in Sources */,
 				3828B9A729F867480084A874 /* NftImageTableViewCellScreen.swift in Sources */,
 				38CC533429F1EB30000F0EEA /* HomeViewModel.swift in Sources */,
 				380D987629FAD12800672C80 /* ListOffersTableViewCellScreen.swift in Sources */,
 				3808776129C8C3ED007C60F8 /* LoginVC.swift in Sources */,
+				3820718329FC616F0084F06D /* WalletScreen.swift in Sources */,
 				3808775D29C8C3ED007C60F8 /* AppDelegate.swift in Sources */,
 				3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */,
+				3820718B29FC691F0084F06D /* WalletData.swift in Sources */,
 				3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */,
 				380D988029FB00F200672C80 /* MagnifyingGlassScreen.swift in Sources */,
 				38CC534729F447D5000F0EEA /* NftFilterCollectionViewCell.swift in Sources */,
@@ -603,6 +654,7 @@
 				3828B99E29F8333B0084A874 /* NftDetailViewModel.swift in Sources */,
 				3828B9B629F9E9130084A874 /* LastestDealTableViewCellViewModel.swift in Sources */,
 				3828B9AA29F875BA0084A874 /* NftDescriptionTableViewCell.swift in Sources */,
+				3820718029FC614F0084F06D /* WalletVC.swift in Sources */,
 				3828B99B29F833250084A874 /* NftDetailVC.swift in Sources */,
 				3808775F29C8C3ED007C60F8 /* SceneDelegate.swift in Sources */,
 				380D987A29FADF7500672C80 /* CACornerMask+Extension.swift in Sources */,
