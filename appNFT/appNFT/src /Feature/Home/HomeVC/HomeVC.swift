@@ -69,7 +69,7 @@ extension HomeVC: HomeViewModelDelegate {
     }
     
     func error() {
-        print(#function)
+       // print(#function)
     }
     
 }

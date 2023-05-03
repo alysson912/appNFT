@@ -88,7 +88,7 @@ extension LoginVC: UITextFieldDelegate {
         validateTextFields()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print(#function)
+      //  print(#function)
         textField.resignFirstResponder()
         return true
     }
@@ -99,19 +99,19 @@ extension LoginVC: loginScreenProtocol {
         auth?.signIn(withEmail: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "", completion: { user, error in
             if error != nil {// error
                 
-                print(error?.localizedDescription ?? "")
+            //    print(error?.localizedDescription ?? "")
                 self.alert?.getAlert(title: "error no  Login", message: error?.localizedDescription ?? "", completion: {
-                    print("botao pressionado!")
+           //         print("botao pressionado!")
                 })
                 
             }else{// succes
-                print("Sucesso")
+              //  print("Sucesso")
             }
         })
     }
     
     func tappedRegisterButton() { // falta implementar
-        print(#function)
+      //  print(#function)
     }
 
 }

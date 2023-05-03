@@ -22,10 +22,10 @@ class HomeService: HomeServiceDelegate {
             switch response.result {
         
             case .success(let success):
-                print("SUCCESS => \(#function)")
+            //    print("SUCCESS => \(#function)")
                 completion(success, nil)
             case .failure(let error):
-                print("ERROR => \(#function)")
+             //   print("ERROR => \(#function)")
                 completion(nil, Error.erroRequest(error))
             }
         }

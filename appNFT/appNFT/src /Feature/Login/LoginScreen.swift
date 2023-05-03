@@ -128,11 +128,11 @@ class LoginScreen: UIView {
     }
 
     @objc func tappedLoginButton(_ sender: UIButton){
-        print(#function)
+     //   print(#function)
         delegate?.tappedLoginButton()
     }
     @objc func tappedRecoverPasswprdButton(_ sender: UIButton){
-        print(#function)
+     //   print(#function)
     }
     
     

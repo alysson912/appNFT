@@ -8,11 +8,12 @@
 import UIKit
 
 enum WalletNameCell: Int {
-    case quotationEth = 1
+    case quotationEth = 0
+    case transactionList = 1
 }
 
 class WalletVC: UIViewController {
-
+    
     private var screen: WalletScreen?
     var viewModel: WalletViewModel = WalletViewModel()
     
@@ -21,7 +22,7 @@ class WalletVC: UIViewController {
         view = screen
     }
     
-    override func viewWillAppear(_ animated: Bool) { // ciclo de vida para esconder a navigation 
+    override func viewWillAppear(_ animated: Bool) { // ciclo de vida para esconder a navigation
         navigationController?.isNavigationBarHidden = true
     }
     
@@ -44,7 +45,7 @@ extension WalletVC: WalletViewModelDelegate {
     }
     
     func error() {
-        print(#function)
+        //  print(#function)
     }
     
     
@@ -57,11 +58,20 @@ extension WalletVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
-        
-        cell?.setupCell(data: viewModel.loadCurrentQuotationEthereum(indexPath: indexPath))
-        
-        return cell ?? UITableViewCell()
+        switch WalletNameCell(rawValue: indexPath.row) {
+        case .quotationEth:
+            let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
+            cell?.setupCell(data: viewModel.quotationEthereum)
+            return cell ?? UITableViewCell()
+            
+        case .transactionList:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LatestTransactionsTableViewCell.identifier, for: indexPath) as? LatestTransactionsTableViewCell
+            cell?.setupCell(data: viewModel.latestTransactionsCell)
+            return cell ?? UITableViewCell()
+            
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

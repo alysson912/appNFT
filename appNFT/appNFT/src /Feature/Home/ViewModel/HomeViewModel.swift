@@ -35,7 +35,7 @@ class HomeViewModel{
                     self.searchNftData = result
                     self.delegate?.sucess()
                 } else {
-                    print(faiule as Any)
+                 //   print(faiule as Any)
                     self.delegate?.error()
                 }
             }
@@ -47,7 +47,7 @@ class HomeViewModel{
                     self.searchNftData = result
                     self.delegate?.sucess()
                 } else {
-                    print(faiule as Any)
+                 //   print(faiule as Any)
                     self.delegate?.error()
                 }
             }

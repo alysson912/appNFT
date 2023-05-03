@@ -58,8 +58,7 @@ extension LastestDealTableViewCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListOffersTableViewCell.identifier, for: indexPath) as?
-        ListOffersTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListOffersTableViewCell.identifier, for: indexPath) as? ListOffersTableViewCell
         
         cell?.setupCell(data: viewModel.loadCurrentLastesDeal(indexPath: indexPath), isInitial: viewModel.isInitial(indexPath: indexPath), isFinal: viewModel.isFinal(indexPath: indexPath))
         return cell ??  UITableViewCell()

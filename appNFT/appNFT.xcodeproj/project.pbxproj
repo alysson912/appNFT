@@ -42,6 +42,11 @@
 		3832F5A329F089CB00A8AA18 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A229F089CB00A8AA18 /* TabBarVC.swift */; };
 		3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A629F08AB300A8AA18 /* HomeVC.swift */; };
 		3832F5AA29F08DB900A8AA18 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832F5A929F08DB900A8AA18 /* HomeScreen.swift */; };
+		384022492A01A03700F0DA30 /* LatestTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384022482A01A03700F0DA30 /* LatestTransactionsTableViewCell.swift */; };
+		3840224C2A01A06D00F0DA30 /* LatestTransactionsTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840224B2A01A06D00F0DA30 /* LatestTransactionsTableViewCellScreen.swift */; };
+		3840224F2A01E74700F0DA30 /* LatestTransactionsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840224E2A01E74700F0DA30 /* LatestTransactionsTableViewCellViewModel.swift */; };
+		384022522A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384022512A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift */; };
+		384022552A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384022542A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift */; };
 		3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855B48529E788F700CA6768 /* UIViewController+Extension.swift */; };
 		38A25BB429E78278006E3D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A25BB329E78278006E3D7F /* GoogleService-Info.plist */; };
 		38CC533429F1EB30000F0EEA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC533329F1EB30000F0EEA /* HomeViewModel.swift */; };
@@ -93,6 +98,11 @@
 		3832F5A229F089CB00A8AA18 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		3832F5A629F08AB300A8AA18 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		3832F5A929F08DB900A8AA18 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		384022482A01A03700F0DA30 /* LatestTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		3840224B2A01A06D00F0DA30 /* LatestTransactionsTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionsTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3840224E2A01E74700F0DA30 /* LatestTransactionsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTransactionsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		384022512A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		384022542A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactionTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3855B48529E788F700CA6768 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38A25BB329E78278006E3D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38CC533329F1EB30000F0EEA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -404,6 +414,49 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		384022472A019FE500F0DA30 /* LatestTransactionsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3840224D2A01E72300F0DA30 /* ViewModel */,
+				3840224A2A01A04500F0DA30 /* Screen */,
+				384022482A01A03700F0DA30 /* LatestTransactionsTableViewCell.swift */,
+			);
+			path = LatestTransactionsTableViewCell;
+			sourceTree = "<group>";
+		};
+		3840224A2A01A04500F0DA30 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3840224B2A01A06D00F0DA30 /* LatestTransactionsTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3840224D2A01E72300F0DA30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3840224E2A01E74700F0DA30 /* LatestTransactionsTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		384022502A01E8E800F0DA30 /* ListOfTransactionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				384022532A01E91800F0DA30 /* Screen */,
+				384022512A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift */,
+			);
+			path = ListOfTransactionTableViewCell;
+			sourceTree = "<group>";
+		};
+		384022532A01E91800F0DA30 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				384022542A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		3855B48329E788CA00CA6768 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +531,8 @@
 		38CC534429F4479A000F0EEA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				384022502A01E8E800F0DA30 /* ListOfTransactionTableViewCell */,
+				384022472A019FE500F0DA30 /* LatestTransactionsTableViewCell */,
 				3820718E29FC9CBB0084F06D /* QuotationEthTableVIewCell */,
 				380D987029FAD09E00672C80 /* ListOffersTableViewCell */,
 				3828B9AE29F9E0F90084A874 /* LastestDealTableViewCell */,
@@ -656,7 +711,9 @@
 				38CC533429F1EB30000F0EEA /* HomeViewModel.swift in Sources */,
 				380D987629FAD12800672C80 /* ListOffersTableViewCellScreen.swift in Sources */,
 				3808776129C8C3ED007C60F8 /* LoginVC.swift in Sources */,
+				3840224C2A01A06D00F0DA30 /* LatestTransactionsTableViewCellScreen.swift in Sources */,
 				3820718329FC616F0084F06D /* WalletScreen.swift in Sources */,
+				3840224F2A01E74700F0DA30 /* LatestTransactionsTableViewCellViewModel.swift in Sources */,
 				3808775D29C8C3ED007C60F8 /* AppDelegate.swift in Sources */,
 				3832F5A729F08AB300A8AA18 /* HomeVC.swift in Sources */,
 				3820718B29FC691F0084F06D /* WalletData.swift in Sources */,
@@ -674,7 +731,9 @@
 				3832F5AA29F08DB900A8AA18 /* HomeScreen.swift in Sources */,
 				3820719329FC9D030084F06D /* QuotationEthTableVIewCellScreen.swift in Sources */,
 				38CC534329F1EED2000F0EEA /* NFTData.swift in Sources */,
+				384022522A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift in Sources */,
 				3828B99E29F8333B0084A874 /* NftDetailViewModel.swift in Sources */,
+				384022492A01A03700F0DA30 /* LatestTransactionsTableViewCell.swift in Sources */,
 				3820719029FC9CED0084F06D /* QuotationEthTableViewCell.swift in Sources */,
 				3828B9B629F9E9130084A874 /* LastestDealTableViewCellViewModel.swift in Sources */,
 				3828B9AA29F875BA0084A874 /* NftDescriptionTableViewCell.swift in Sources */,
@@ -685,6 +744,7 @@
 				3832F5A329F089CB00A8AA18 /* TabBarVC.swift in Sources */,
 				380D987229FAD0CA00672C80 /* ListOffersTableViewCell.swift in Sources */,
 				380D987829FADBC300672C80 /* UIView+Extension.swift in Sources */,
+				384022552A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift in Sources */,
 				3832F5A029F0835900A8AA18 /* Alert.swift in Sources */,
 				38CC534D29F45BE3000F0EEA /* NftTableViewCell.swift in Sources */,
 				3828B9B029F9E14A0084A874 /* LastestDealTableViewCell.swift in Sources */,

@@ -12,7 +12,7 @@ enum HeightLastestDeal: CGFloat {
 }
 
 class LastestDealTableViewCellViewModel {
-
+    
     
     var nft: Nft?
     
@@ -25,7 +25,7 @@ class LastestDealTableViewCellViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return nft?.latestDeals?.count ?? 0 
+        return nft?.latestDeals?.count ?? 0
     }
     
     public var heightForRowAt: CGFloat {
