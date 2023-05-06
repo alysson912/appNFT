@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 
 class LoginVC: UIViewController {
-
+    
     var loginScreen: LoginScreen?
     var auth: Auth?
     var alert: AlertController?
@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
     override func loadView() {
         loginScreen = LoginScreen()
         alert = AlertController(controller: self)
-         view = loginScreen
+        view = loginScreen
     }
     
     override func viewDidLoad() {
@@ -28,17 +28,17 @@ class LoginVC: UIViewController {
         loginScreen?.configTextFieldDelegate(delegate: self)
         isEnableLoginButton(false)
     }
-
+    
     func validateTextFields(){
         if (loginScreen?.emailTextField.text ?? "").isValid(validType: .email) &&
-        (loginScreen?.passwordTextField.text ?? "").isValid(validType: .password){
+            (loginScreen?.passwordTextField.text ?? "").isValid(validType: .password){
             // habiltado
             isEnableLoginButton(true)
         }else {
             // desable
             isEnableLoginButton(false)
         }
-            
+        
     }
     
     func isEnableLoginButton(_ isEnable: Bool){
@@ -88,7 +88,7 @@ extension LoginVC: UITextFieldDelegate {
         validateTextFields()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      //  print(#function)
+        //  print(#function)
         textField.resignFirstResponder()
         return true
     }
@@ -99,19 +99,20 @@ extension LoginVC: loginScreenProtocol {
         auth?.signIn(withEmail: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "", completion: { user, error in
             if error != nil {// error
                 
-            //    print(error?.localizedDescription ?? "")
+                print(error?.localizedDescription ?? "")
                 self.alert?.getAlert(title: "error no  Login", message: error?.localizedDescription ?? "", completion: {
-           //         print("botao pressionado!")
                 })
                 
             }else{// succes
-              //  print("Sucesso")
+                let vc = TabBarVC()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
             }
         })
     }
     
     func tappedRegisterButton() { // falta implementar
-      //  print(#function)
+        //  print(#function)
     }
-
+    
 }
