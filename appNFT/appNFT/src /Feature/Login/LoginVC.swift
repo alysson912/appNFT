@@ -99,7 +99,7 @@ extension LoginVC: loginScreenProtocol {
         auth?.signIn(withEmail: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "", completion: { user, error in
             if error != nil {// error
                 
-                print(error?.localizedDescription ?? "")
+              //  print(error?.localizedDescription ?? "")
                 self.alert?.getAlert(title: "error no  Login", message: error?.localizedDescription ?? "", completion: {
                 })
                 

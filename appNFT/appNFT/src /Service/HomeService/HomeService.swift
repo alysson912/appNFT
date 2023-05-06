@@ -18,7 +18,7 @@ class HomeService: HomeServiceDelegate {
         let url: String = "https://run.mocky.io/v3/64a02ab5-1add-443c-ad3a-6a83bb4742c1"
         
         AF.request(url, method: .get).validate(statusCode:  200...299).responseDecodable(of: NFTData.self){ response in
-            debugPrint(response)
+           // debugPrint(response)
             switch response.result {
         
             case .success(let success):
