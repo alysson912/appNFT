@@ -21,6 +21,8 @@ class HomeVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.configSearchBarDelegate(delegate: self)

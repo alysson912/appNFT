@@ -8,19 +8,20 @@
 import UIKit
 
 class HomeScreen: UIView {
-    
+
     
     lazy var viewBackGround: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        
         return view
     }()
     
     lazy var logoImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage( named: "Vector" )
+        image.image = UIImage( named: "logoIMG" )
         return image
     }()
     
@@ -75,6 +76,9 @@ class HomeScreen: UIView {
         
     }
     
+    private func loadingAnimation(){
+        
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -85,7 +89,6 @@ class HomeScreen: UIView {
     
     private func addViews(){
         addSubview(viewBackGround)
-        viewBackGround.addSubview(logoImageView)
         viewBackGround.addSubview(searchBar)
         viewBackGround.addSubview(collectionView)
         addSubview(tableView)
@@ -101,15 +104,12 @@ class HomeScreen: UIView {
             viewBackGround.trailingAnchor.constraint(equalTo: trailingAnchor),
             viewBackGround.heightAnchor.constraint(equalToConstant: 160),
             
-            logoImageView.topAnchor.constraint(equalTo: viewBackGround.topAnchor, constant: 5),
-            logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            logoImageView.heightAnchor.constraint(equalToConstant: 40),
-            logoImageView.widthAnchor.constraint(equalToConstant: 40),
+       
             
-            searchBar.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 10),
-            searchBar.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor),
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-            searchBar.heightAnchor.constraint(equalToConstant: 46),
+            searchBar.heightAnchor.constraint(equalToConstant: 50),
             
             collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 15),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),

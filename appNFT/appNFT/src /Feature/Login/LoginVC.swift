@@ -47,6 +47,7 @@ class LoginVC: UIViewController {
             loginScreen?.loginButton.isEnabled = true
             loginScreen?.loginButton.alpha = 1
             
+          
         }else {
             loginScreen?.loginButton.setTitleColor(.white, for: .normal)
             loginScreen?.loginButton.isEnabled = false
@@ -54,6 +55,8 @@ class LoginVC: UIViewController {
         }
     }
     
+    
+   
 }
 
 extension LoginVC: UITextFieldDelegate {
@@ -104,12 +107,21 @@ extension LoginVC: loginScreenProtocol {
                 })
                 
             }else{// succes
-                let vc = TabBarVC()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true)
+               
+                
+                self.loginScreen?.animationView.isHidden = false
+                
+              
             }
+            let vc = TabBarVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         })
     }
+    
+
+    
+ 
     
     func tappedRegisterButton() { // falta implementar
         //  print(#function)

@@ -14,7 +14,7 @@ class NftFilterCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
         label.clipsToBounds = true
         label.layer.cornerRadius = 10

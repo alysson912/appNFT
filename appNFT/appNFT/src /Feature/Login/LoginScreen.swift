@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol loginScreenProtocol: AnyObject {
     func tappedLoginButton()
@@ -24,15 +25,30 @@ class LoginScreen: UIView {
     lazy var subImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage( named: "BGLogin" )
+        image.image = UIImage( named: "loginBackgroundImage" )
         image.contentMode = .scaleAspectFill
         return image
     }()
+    
+    lazy var animationView: LottieAnimationView = {
+        var animation = LottieAnimationView()
+        animation.translatesAutoresizingMaskIntoConstraints = false
+        animation = .init(name: "lf20_kxsd2ytq")
+        animation.contentMode = .scaleAspectFill
+        animation.loopMode = .repeat(3)
+        animation.animationSpeed = 0.5
+        animation.play()
+        animation.backgroundColor = .white
+        animation.isHidden = true 
+        return animation
+    }()
+    
+    
    
     lazy var logoAppImageView : UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage( named: "BFLogin" )
+        image.image = UIImage( named: "logoIMG" )
         image.contentMode = .scaleAspectFit
         //image.backgroundColor = .red
         return image
@@ -168,10 +184,12 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         setupViews()
         setupConstraints()
+        
     }
     
     private func setupViews(){
         addSubview(subImageView)
+        addSubview(animationView)
         addSubview(logoAppImageView)
         addSubview(loginLabel)
         addSubview(descriptionLabel)
@@ -183,6 +201,8 @@ class LoginScreen: UIView {
         addSubview(signInMetamaskView)
         signInMetamaskView.addSubview(signInMetamaskImageView)
         signInMetamaskView.addSubview(signInMetamaskLabel)
+        
+        
     }
     
     
@@ -192,6 +212,8 @@ class LoginScreen: UIView {
     }
     
     
+ 
+    
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
@@ -199,6 +221,9 @@ class LoginScreen: UIView {
             subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: centerYAnchor),
             
             logoAppImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 55),

@@ -55,6 +55,10 @@
 		384022522A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384022512A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift */; };
 		384022552A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384022542A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift */; };
 		3855B48629E788F700CA6768 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855B48529E788F700CA6768 /* UIViewController+Extension.swift */; };
+		3896FA3E2A169A81005D86EA /* lf20_kxsd2ytq.json in Resources */ = {isa = PBXBuildFile; fileRef = 3896FA3D2A169A81005D86EA /* lf20_kxsd2ytq.json */; };
+		3896FA422A16B74B005D86EA /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896FA412A16B74B005D86EA /* LoadingVC.swift */; };
+		3896FA442A16B758005D86EA /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896FA432A16B758005D86EA /* LoadingScreen.swift */; };
+		3896FA472A16B791005D86EA /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896FA462A16B791005D86EA /* LoadingViewModel.swift */; };
 		38A25BB429E78278006E3D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A25BB329E78278006E3D7F /* GoogleService-Info.plist */; };
 		38CC533429F1EB30000F0EEA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC533329F1EB30000F0EEA /* HomeViewModel.swift */; };
 		38CC533929F1EBC8000F0EEA /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CC533829F1EBC8000F0EEA /* HomeService.swift */; };
@@ -118,6 +122,10 @@
 		384022512A01E91000F0DA30 /* ListOfTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		384022542A01E92B00F0DA30 /* ListOfTransactionTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTransactionTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3855B48529E788F700CA6768 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3896FA3D2A169A81005D86EA /* lf20_kxsd2ytq.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf20_kxsd2ytq.json; sourceTree = "<group>"; };
+		3896FA412A16B74B005D86EA /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		3896FA432A16B758005D86EA /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		3896FA462A16B791005D86EA /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		38A25BB329E78278006E3D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38CC533329F1EB30000F0EEA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		38CC533829F1EBC8000F0EEA /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 		3808777029C8C4DE007C60F8 /* src  */ = {
 			isa = PBXGroup;
 			children = (
+				3896FA3C2A16993A005D86EA /* Lotties */,
 				38CC534129F1EEC4000F0EEA /* Model */,
 				38CC533C29F1EDB6000F0EEA /* Json */,
 				38CC533629F1EB99000F0EEA /* Service */,
@@ -400,6 +409,7 @@
 		3832F5A429F08A0A00A8AA18 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				3896FA3F2A16B727005D86EA /* Loading */,
 				383741622A06CC8E00700262 /* Profile */,
 				3820717E29FC611E0084F06D /* Wallet */,
 				380D987B29FB00A500672C80 /* MagnifyingGlass */,
@@ -549,6 +559,40 @@
 				380D987729FADBC300672C80 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3896FA3C2A16993A005D86EA /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				3896FA3D2A169A81005D86EA /* lf20_kxsd2ytq.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		3896FA3F2A16B727005D86EA /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				3896FA452A16B780005D86EA /* ViewModel */,
+				3896FA402A16B731005D86EA /* Screen */,
+				3896FA412A16B74B005D86EA /* LoadingVC.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		3896FA402A16B731005D86EA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3896FA432A16B758005D86EA /* LoadingScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3896FA452A16B780005D86EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3896FA462A16B791005D86EA /* LoadingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		38CC533229F1EB01000F0EEA /* ViewModel */ = {
@@ -728,6 +772,7 @@
 				3808776929C8C3EE007C60F8 /* LaunchScreen.storyboard in Resources */,
 				3808776629C8C3EE007C60F8 /* Assets.xcassets in Resources */,
 				38A25BB429E78278006E3D7F /* GoogleService-Info.plist in Resources */,
+				3896FA3E2A169A81005D86EA /* lf20_kxsd2ytq.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +828,7 @@
 				3820718629FC67960084F06D /* WalletViewModel.swift in Sources */,
 				3828B9B329F9E16D0084A874 /* LastestDealTableViewCellScreen.swift in Sources */,
 				3820718929FC67D30084F06D /* WalletService.swift in Sources */,
+				3896FA472A16B791005D86EA /* LoadingViewModel.swift in Sources */,
 				3808777329C8C549007C60F8 /* LoginScreen.swift in Sources */,
 				3828B9A729F867480084A874 /* NftImageTableViewCellScreen.swift in Sources */,
 				38CC533429F1EB30000F0EEA /* HomeViewModel.swift in Sources */,
@@ -809,6 +855,7 @@
 				38CC533929F1EBC8000F0EEA /* HomeService.swift in Sources */,
 				38CC535129F45C68000F0EEA /* NftTableViewCellScreen.swift in Sources */,
 				380AEF5F29EDDA00009EEA58 /* String+Extension.swift in Sources */,
+				3896FA422A16B74B005D86EA /* LoadingVC.swift in Sources */,
 				3828B9A429F8669E0084A874 /* NftImageTableViewCell.swift in Sources */,
 				3832F5AA29F08DB900A8AA18 /* HomeScreen.swift in Sources */,
 				3820719329FC9D030084F06D /* QuotationEthTableVIewCellScreen.swift in Sources */,
@@ -824,6 +871,7 @@
 				3828B99B29F833250084A874 /* NftDetailVC.swift in Sources */,
 				3808775F29C8C3ED007C60F8 /* SceneDelegate.swift in Sources */,
 				380D987A29FADF7500672C80 /* CACornerMask+Extension.swift in Sources */,
+				3896FA442A16B758005D86EA /* LoadingScreen.swift in Sources */,
 				3832F5A329F089CB00A8AA18 /* TabBarVC.swift in Sources */,
 				380D987229FAD0CA00672C80 /* ListOffersTableViewCell.swift in Sources */,
 				380D987829FADBC300672C80 /* UIView+Extension.swift in Sources */,

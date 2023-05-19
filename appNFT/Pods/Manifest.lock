@@ -752,6 +752,7 @@ PODS:
   - Libuv-gRPC/Implementation (0.0.10):
     - Libuv-gRPC/Interface (= 0.0.10)
   - Libuv-gRPC/Interface (0.0.10)
+  - lottie-ios (4.2.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -765,6 +766,7 @@ DEPENDENCIES:
   - FirebaseAnalytics
   - FirebaseAuth
   - FirebaseFirestore
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
@@ -786,6 +788,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - Libuv-gRPC
+    - lottie-ios
     - nanopb
     - PromisesObjC
 
@@ -808,9 +811,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
 
-PODFILE CHECKSUM: fbc93af29fa2b0e245ba75b308b69503d86f1918
+PODFILE CHECKSUM: 01f53a2f017841d50224fa1f97d21feced2f29bf
 
 COCOAPODS: 1.11.3
