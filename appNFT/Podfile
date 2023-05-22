@@ -6,6 +6,7 @@ target 'appNFT' do
   use_frameworks!
 
   # Pods for appNFT
+
 pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'

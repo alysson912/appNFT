@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HomeVC: UIViewController {
     
     var screen: HomeScreen?
@@ -21,14 +22,11 @@ class HomeVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.request) // alternando consumo de dados entre mock e api
-        
     }
 }
 
@@ -71,7 +69,7 @@ extension HomeVC: HomeViewModelDelegate {
     }
     
     func error() {
-       // print(#function)
+        // print(#function)
     }
     
 }

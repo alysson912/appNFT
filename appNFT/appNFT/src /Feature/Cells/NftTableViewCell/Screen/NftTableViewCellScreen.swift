@@ -73,7 +73,10 @@ class NftTableViewCellScreen: UIView {
         backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1)
         addView()
         configConstraints()
+
     }
+    
+
     
     func addView(){
         addSubview(viewBackground)
