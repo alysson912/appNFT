@@ -31,7 +31,7 @@ class TabBarVC: UITabBarController {
         
         guard let items = tabBar.items else { return }
         
-        items[0].image = UIImage(systemName: "trash")
+        items[0].image = UIImage(systemName: "house")
         items[1].image = UIImage(systemName: "wallet.pass")
         items[2].image = UIImage(systemName: "rectangle.portrait.and.arrow.right.fill")
     }

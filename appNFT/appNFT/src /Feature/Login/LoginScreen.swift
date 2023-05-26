@@ -57,7 +57,7 @@ class LoginScreen: UIView {
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "BF NFT!"
+        label.text = "NFT!"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
         return label
@@ -66,7 +66,7 @@ class LoginScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "O marketplace de NFTs da Back Front Academy!"
+        label.text = "O marketplace de NFTs !"
         label.textAlignment = .center
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 14)
@@ -113,7 +113,7 @@ class LoginScreen: UIView {
         let btn = UIButton( type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Esqueceu a senha?", for: .normal)
-        btn.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal)
+        btn.setTitleColor(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0), for: .normal)
         btn.addTarget(self, action: #selector(tappedRecoverPasswprdButton), for: .touchUpInside)
         return btn
     }()

@@ -63,7 +63,7 @@ class ProfileTableViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 22)
-        label.text = "Caio Fabrini"
+        label.text = "Alysson M Dodo"
         label.textAlignment = .right
         return label
     }()
